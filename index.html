@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Time tracking dashboard | Manuel Rivas</title>
+    <!-- Google fonts stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main id="dashboard" class="dashboard">
+      <header class="user-header">
+        Report for
+        <h1 class="user-name">Jeremy Robson</h1>
+        <form class="timeframe-selector" id="timeframeSelector">
+          <div class="radio-container">
+            <input id="daily" type="radio" name="timeframe" value="daily" />
+            <label for="daily">Daily</label>
+          </div>
+          <div class="radio-container">
+            <input id="weekly" type="radio" name="timeframe" value="weekly" />
+            <label for="weekly">Weekly</label>
+          </div>
+          <div class="radio-container">
+            <input id="monthly" type="radio" name="timeframe" value="monthly" />
+            <label for="monthly">Monthly</label>
+          </div>
+        </form>
+      </header>
+      <div class="dashboard-content" id="dashboardContent"></div>
+    </main>
+
+    <!-- <footer class="attribution"> -->
+    <!--   Challenge by -->
+    <!--   <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" -->
+    <!--     >Frontend Mentor</a -->
+    <!--   >. Coded by -->
+    <!--   <a href="https://github.com/AngryMorrocoy/">Manuel Rivas ;)</a>. -->
+    <!-- </footer> -->
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
