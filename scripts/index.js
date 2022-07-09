@@ -8,17 +8,23 @@ function createTimeDisplay(activity, timeSpent, timeSpan) {
   };
 
   const template = document.createElement('template');
-  const displayElementId = activity.replace(' ', '_').toLowerCase();
+  const displayElementId = activity.replace(' ', '-').toLowerCase();
 
   const timeDisplayHtml = `
     <div class="time-display" id="${displayElementId}">
-      <header class="time-display__header">
-        <h4>${activity}</h4>
-      </header>
-      <span class="time-display__content">${timeSpent.current}hrs</span>
-      <footer class="time-display__footer">
-        ${previousTimeSpentPrefixes[timeSpan]} - ${timeSpent.previous}hrs
-      </footer>
+      <img class="time-display__above-header"
+        src="images/icon-${displayElementId}.svg"
+        alt="${activity} icon">
+      <div class="wrapper">
+        <header class="time-display__header">
+          <h4>${activity}</h4>
+          <img src="images/icon-ellipsis.svg" alt="three dots">
+        </header>
+        <span class="time-display__content">${timeSpent.current}hrs</span>
+        <footer class="time-display__footer">
+          ${previousTimeSpentPrefixes[timeSpan]} - ${timeSpent.previous}hrs
+        </footer>
+      </div>
     </div>
   `;
 

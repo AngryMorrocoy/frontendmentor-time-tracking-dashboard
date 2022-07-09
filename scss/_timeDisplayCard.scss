@@ -1,0 +1,67 @@
+.time-display {
+  $title-size: 1.125rem;
+  position: relative;
+
+  z-index: -200;
+  border-radius: $title-size;
+
+  padding-top: 2.6rem;
+  overflow: hidden;
+
+  @each $id, $color in $activity-card_colors {
+    &#{$id} {
+      background: linear-gradient(to bottom, $color, 85%, $dark-blue);
+    }
+  }
+
+  &__above-header {
+    height: auto;
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    right: 1rem;
+  }
+
+  .wrapper {
+    background-color: $dark-blue;
+    border-radius: $title-size;
+    z-index: 1000;
+
+    padding: 2rem 1.5rem;
+
+    display: grid;
+
+    grid-template-areas:
+      'header header'
+      'content footer';
+
+    grid-gap: 1.1rem;
+  }
+
+  &__header {
+    grid-area: header;
+    font-size: $title-size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: auto;
+      width: 1.5rem;
+    }
+  }
+
+  &__content {
+    font-weight: 300;
+    font-size: 1.5rem;
+    align-self: center;
+    justify-self: start;
+  }
+
+  &__footer {
+    font-size: 0.75rem;
+    color: $pale-blue;
+    align-self: center;
+    justify-self: end;
+  }
+}

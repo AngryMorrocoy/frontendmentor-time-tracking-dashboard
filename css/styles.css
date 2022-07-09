@@ -1,0 +1,92 @@
+.time-display {
+  position: relative;
+  z-index: -200;
+  border-radius: 1.125rem;
+  padding-top: 2.6rem;
+  overflow: hidden;
+}
+.time-display#work {
+  background: linear-gradient(to bottom, #ff8c66, 85%, #1c1f4a);
+}
+.time-display#play {
+  background: linear-gradient(to bottom, #56c2e6, 85%, #1c1f4a);
+}
+.time-display#study {
+  background: linear-gradient(to bottom, #ff5c7c, 85%, #1c1f4a);
+}
+.time-display#exercise {
+  background: linear-gradient(to bottom, #4acf81, 85%, #1c1f4a);
+}
+.time-display#social {
+  background: linear-gradient(to bottom, #7536d3, 85%, #1c1f4a);
+}
+.time-display#self-care {
+  background: linear-gradient(to bottom, #f1c65b, 85%, #1c1f4a);
+}
+.time-display__above-header {
+  height: auto;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  right: 1rem;
+}
+.time-display .wrapper {
+  background-color: #1c1f4a;
+  border-radius: 1.125rem;
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-areas: "header header" "content footer";
+  grid-gap: 1.1rem;
+}
+.time-display__header {
+  grid-area: header;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-display__header img {
+  height: auto;
+  width: 1.5rem;
+}
+.time-display__content {
+  font-weight: 300;
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: start;
+}
+.time-display__footer {
+  font-size: 0.75rem;
+  color: #bdc1ff;
+  align-self: center;
+  justify-self: end;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-gap: 1.375rem;
+}
+
+html {
+  font-size: 16px;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f1424;
+}
+
+/*# sourceMappingURL=styles.css.map */
