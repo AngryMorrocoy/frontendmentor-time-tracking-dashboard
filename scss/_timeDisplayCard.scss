@@ -2,7 +2,6 @@
   $title-size: 1.125rem;
   position: relative;
 
-  z-index: -200;
   border-radius: $title-size;
 
   padding-top: 2.6rem;
@@ -17,15 +16,40 @@
   &__above-header {
     height: auto;
     position: absolute;
-    z-index: -100;
+    z-index: 500;
     top: 0;
     right: 1rem;
   }
 
   .wrapper {
+    position: relative;
+    z-index: 1000;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($dark-blue, 10);
+    }
+
+    & :not(&):hover {
+      cursor: auto;
+      background-color: $dark-blue;
+
+      &::before {
+        pointer-events: none;
+        content: '';
+        border-radius: $title-size;
+        z-index: -10;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: inherit;
+      }
+    }
+
     background-color: $dark-blue;
     border-radius: $title-size;
-    z-index: 1000;
 
     padding: 2rem 1.5rem;
 

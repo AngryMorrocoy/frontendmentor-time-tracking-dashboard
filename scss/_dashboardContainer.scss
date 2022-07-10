@@ -51,6 +51,11 @@
       background-color: $dark-blue;
 
       .radio-container {
+        *:hover {
+          color: white;
+          cursor: pointer;
+        }
+
         display: flex;
         flex-direction: column;
         color: $desaturated-blue;

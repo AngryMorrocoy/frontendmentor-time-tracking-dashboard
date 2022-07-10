@@ -1,6 +1,5 @@
 .time-display {
   position: relative;
-  z-index: -200;
   border-radius: 1.125rem;
   padding-top: 2.6rem;
   overflow: hidden;
@@ -26,18 +25,39 @@
 .time-display__above-header {
   height: auto;
   position: absolute;
-  z-index: -100;
+  z-index: 500;
   top: 0;
   right: 1rem;
 }
 .time-display .wrapper {
+  position: relative;
+  z-index: 1000;
   background-color: #1c1f4a;
   border-radius: 1.125rem;
-  z-index: 1000;
   padding: 2rem 1.5rem;
   display: grid;
   grid-template-areas: "header header" "content footer";
   gap: 1.1rem;
+}
+.time-display .wrapper:hover {
+  cursor: pointer;
+  background-color: #292f70;
+}
+.time-display .wrapper :not(.time-display .wrapper):hover {
+  cursor: auto;
+  background-color: #1c1f4a;
+}
+.time-display .wrapper :not(.time-display .wrapper):hover::before {
+  pointer-events: none;
+  content: "";
+  border-radius: 1.125rem;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: inherit;
 }
 .time-display__header {
   grid-area: header;
@@ -109,6 +129,10 @@
   display: flex;
   flex-direction: column;
   color: #6f76c8;
+}
+.dashboard .user-header .timeframe-selector .radio-container *:hover {
+  color: white;
+  cursor: pointer;
 }
 .dashboard .user-header .timeframe-selector .radio-container input[type=radio] {
   opacity: 0;
