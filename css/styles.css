@@ -163,6 +163,7 @@
   .dashboard .user-header .user-data .user-image {
     margin-bottom: 2.6rem;
     width: 5.1rem;
+    justify-self: start;
   }
   .dashboard .user-header .user-data .user-name {
     font-size: 2rem;
