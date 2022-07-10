@@ -1,6 +1,7 @@
 .time-display {
   $title-size: 1.125rem;
   position: relative;
+  min-width: 16rem;
 
   border-radius: $title-size;
 
@@ -60,6 +61,13 @@
       'content footer';
 
     gap: 1.1rem;
+
+    @media screen and (min-width: $desktop_breakpoint) {
+      grid-template-areas:
+        'header'
+        'content'
+        'footer';
+    }
   }
 
   &__header {
@@ -81,16 +89,27 @@
   }
 
   &__content {
+    grid-area: content;
     font-weight: 300;
     font-size: 1.5rem;
     align-self: center;
     justify-self: start;
+
+    @media screen and (min-width: $desktop_breakpoint) {
+      font-size: 2.4rem;
+      margin-top: 1.4rem;
+    }
   }
 
   &__footer {
+    grid-area: footer;
     font-size: 0.75rem;
     color: $pale-blue;
     align-self: center;
     justify-self: end;
+
+    @media screen and (min-width: $desktop_breakpoint) {
+      justify-self: start;
+    }
   }
 }
