@@ -37,7 +37,7 @@
   padding: 2rem 1.5rem;
   display: grid;
   grid-template-areas: "header header" "content footer";
-  grid-gap: 1.1rem;
+  gap: 1.1rem;
 }
 .time-display__header {
   grid-area: header;
@@ -63,9 +63,62 @@
   justify-self: end;
 }
 
-.dashboard-content {
+.dashboard {
+  margin: 2rem;
   display: grid;
-  grid-gap: 1.375rem;
+  gap: 1.5rem;
+}
+.dashboard .user-header {
+  background-color: #1c1f4a;
+  border-radius: 1.125rem;
+}
+.dashboard .user-header .user-data {
+  padding: 1.75rem;
+  border-radius: 1.125rem;
+  background-color: #5847eb;
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+}
+.dashboard .user-header .user-data .user-image {
+  width: 4.5rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  grid-row: span 2;
+}
+.dashboard .user-header .user-data .user-name {
+  font-weight: 200;
+  font-size: 1.125rem;
+}
+.dashboard .user-header .user-data span {
+  color: #bdc1ff;
+  font-size: 0.75rem;
+  align-self: flex-end;
+}
+.dashboard .user-header .timeframe-selector {
+  padding: 1.75rem 1.75rem;
+  padding-top: 1rem;
+  border-radius: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1f4a;
+}
+.dashboard .user-header .timeframe-selector .radio-container {
+  display: flex;
+  flex-direction: column;
+  color: #6f76c8;
+}
+.dashboard .user-header .timeframe-selector .radio-container input[type=radio] {
+  opacity: 0;
+}
+.dashboard .user-header .timeframe-selector .radio-container input[type=radio]:checked + label {
+  color: white;
+}
+.dashboard .dashboard-content {
+  display: grid;
+  gap: 1.375rem;
 }
 
 html {
