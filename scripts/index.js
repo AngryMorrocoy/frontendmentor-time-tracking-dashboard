@@ -14,11 +14,14 @@ function createTimeDisplay(activity, timeSpent, timeSpan) {
     <div class="time-display" id="${displayElementId}">
       <img class="time-display__above-header"
         src="images/icon-${displayElementId}.svg"
-        alt="${activity} icon">
-      <div class="wrapper">
+        alt="${activity} icon"
+        >
+      <div class="wrapper" tabindex="0">
         <header class="time-display__header">
           <h4>${activity}</h4>
-          <img class="extra-menu" src="images/icon-ellipsis.svg" alt="three dots">
+          <button class="btn extra-menu">
+            <img src="images/icon-ellipsis.svg" alt="three dots">
+          </button>
         </header>
         <span class="time-display__content">${timeSpent.current}hrs</span>
         <footer class="time-display__footer">

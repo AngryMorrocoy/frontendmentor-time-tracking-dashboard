@@ -26,12 +26,14 @@
     position: relative;
     z-index: 1000;
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
       background-color: lighten($dark-blue, 10);
     }
 
-    & :not(&, .extra-menu):hover {
+    & :not(&, .extra-menu, .extra-menu *):hover,
+    & :not(&, .extra-menu, .extra-menu *):focus {
       cursor: auto;
       background-color: $dark-blue;
 
@@ -77,13 +79,28 @@
     justify-content: space-between;
     align-items: center;
 
+    .btn {
+      background: none;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     .extra-menu {
       height: auto;
       width: 1.5rem;
 
-      &:hover {
-        cursor: pointer;
-        filter: brightness(4);
+      &:hover,
+      &:focus {
+        img {
+          filter: brightness(4);
+        }
+      }
+
+      img {
+        z-index: 500;
       }
     }
   }

@@ -40,15 +40,15 @@
   grid-template-areas: "header header" "content footer";
   gap: 1.1rem;
 }
-.time-display .wrapper:hover {
+.time-display .wrapper:hover, .time-display .wrapper:focus {
   cursor: pointer;
   background-color: #292f70;
 }
-.time-display .wrapper :not(.time-display .wrapper, .extra-menu):hover {
+.time-display .wrapper :not(.time-display .wrapper, .extra-menu, .extra-menu *):hover, .time-display .wrapper :not(.time-display .wrapper, .extra-menu, .extra-menu *):focus {
   cursor: auto;
   background-color: #1c1f4a;
 }
-.time-display .wrapper :not(.time-display .wrapper, .extra-menu):hover::before {
+.time-display .wrapper :not(.time-display .wrapper, .extra-menu, .extra-menu *):hover::before, .time-display .wrapper :not(.time-display .wrapper, .extra-menu, .extra-menu *):focus::before {
   pointer-events: none;
   content: "";
   border-radius: 1.125rem;
@@ -72,13 +72,22 @@
   justify-content: space-between;
   align-items: center;
 }
+.time-display__header .btn {
+  background: none;
+  border: none;
+}
+.time-display__header .btn:hover {
+  cursor: pointer;
+}
 .time-display__header .extra-menu {
   height: auto;
   width: 1.5rem;
 }
-.time-display__header .extra-menu:hover {
-  cursor: pointer;
+.time-display__header .extra-menu:hover img, .time-display__header .extra-menu:focus img {
   filter: brightness(4);
+}
+.time-display__header .extra-menu img {
+  z-index: 500;
 }
 .time-display__content {
   grid-area: content;
