@@ -43,11 +43,11 @@
   cursor: pointer;
   background-color: #292f70;
 }
-.time-display .wrapper :not(.time-display .wrapper):hover {
+.time-display .wrapper :not(.time-display .wrapper, .extra-menu):hover {
   cursor: auto;
   background-color: #1c1f4a;
 }
-.time-display .wrapper :not(.time-display .wrapper):hover::before {
+.time-display .wrapper :not(.time-display .wrapper, .extra-menu):hover::before {
   pointer-events: none;
   content: "";
   border-radius: 1.125rem;
@@ -66,9 +66,13 @@
   justify-content: space-between;
   align-items: center;
 }
-.time-display__header img {
+.time-display__header .extra-menu {
   height: auto;
   width: 1.5rem;
+}
+.time-display__header .extra-menu:hover {
+  cursor: pointer;
+  filter: brightness(4);
 }
 .time-display__content {
   font-weight: 300;

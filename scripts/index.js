@@ -18,7 +18,7 @@ function createTimeDisplay(activity, timeSpent, timeSpan) {
       <div class="wrapper">
         <header class="time-display__header">
           <h4>${activity}</h4>
-          <img src="images/icon-ellipsis.svg" alt="three dots">
+          <img class="extra-menu" src="images/icon-ellipsis.svg" alt="three dots">
         </header>
         <span class="time-display__content">${timeSpent.current}hrs</span>
         <footer class="time-display__footer">
